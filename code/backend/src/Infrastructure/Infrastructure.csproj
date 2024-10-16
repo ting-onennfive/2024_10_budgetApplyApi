@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>budgetApplyApi.Infrastructure</RootNamespace>
+    <AssemblyName>budgetApplyApi.Infrastructure</AssemblyName>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Resources\**" />
+    <EmbeddedResource Remove="Resources\**" />
+    <EntityDeploy Remove="Resources\**" />
+    <None Remove="Resources\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\Identity\RoleClaimService.cs" />
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <Compile Remove="Constants\**" />
+    <Compile Remove="Identity\**" />
+    <Compile Remove="Persistence\**" />
+    <EmbeddedResource Remove="Constants\**" />
+    <EmbeddedResource Remove="Identity\**" />
+    <EmbeddedResource Remove="Persistence\**" />
+    <None Remove="Constants\**" />
+    <None Remove="Identity\**" />
+    <None Remove="Persistence\**" />
+  </ItemGroup>-->
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Blazored.LocalStorage" Version="4.1.5" />
+    <PackageReference Include="ClosedXML" Version="0.102.2" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.0.2" />
+    <PackageReference Include="EPPlus" Version="5.7.0" />
+    <PackageReference Include="GemBox.Document" Version="35.0.1706" />
+    <PackageReference Include="GemBox.Pdf" Version="17.0.1565" />
+    <PackageReference Include="GemBox.Spreadsheet" Version="49.0.1655" />
+    <PackageReference Include="Hangfire.Core" Version="1.7.23" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\Shared\Shared.csproj" />
+  </ItemGroup>
+
+</Project>

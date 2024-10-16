@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>budgetApplyApi.Infrastructure.Shared</RootNamespace>
+    <AssemblyName>budgetApplyApi.Infrastructure.Shared</AssemblyName>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Extensions\**" />
+    <EmbeddedResource Remove="Extensions\**" />
+    <EntityDeploy Remove="Extensions\**" />
+    <None Remove="Extensions\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="2.13.0" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection.Abstractions" Version="2.2.0" />
+    <PackageReference Include="MimeKit" Version="2.13.0" />
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+  </ItemGroup>
+</Project>

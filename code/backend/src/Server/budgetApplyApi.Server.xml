@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>budgetApplyApi.Server</name>
+    </assembly>
+    <members>
+        <member name="T:budgetApplyApi.Server.Controllers.BaseApiController`1">
+            <summary>
+            Abstract BaseApi Controller Class
+            </summary>
+        </member>
+        <member name="M:budgetApplyApi.Server.Controllers.Identity.AccountController.GetProfile">
+            <summary>
+            根據登入身分，取得使用者資訊
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:budgetApplyApi.Server.Controllers.Identity.TokenController.Get(budgetApplyApi.Application.Requests.Identity.TokenRequest)">
+            <summary>
+            取得憑證 Token
+            </summary>
+        </member>
+        <member name="M:budgetApplyApi.Server.Controllers.Identity.UserController.GetAll(System.String)">
+            <summary>
+            取得所有使用者，可根據文字搜尋使用者姓名
+            </summary>
+            <param name="searchString">搜尋文字，針對帳戶姓名</param>
+            <returns>Status 200 OK</returns>
+        </member>
+        <member name="M:budgetApplyApi.Server.Controllers.Identity.UserController.GetByEmployeeUidOrId(System.String)">
+            <summary>
+            根據使用者的 id，取得使用者資訊
+            </summary>
+            <param name="id">使用者於 EIP 的 Id</param>
+            <returns>Status 200 OK</returns>
+        </member>
+        <member name="M:budgetApplyApi.Server.Controllers.Identity.UserController.Update(budgetApplyApi.Application.Requests.Identity.UpdateUserRequest)">
+            <summary>
+            編輯使用者
+            </summary>
+            <param name="request"></param>
+            <returns>Status 200 OK</returns>
+        </member>
+        <member name="M:budgetApplyApi.Server.Controllers.Identity.UserController.RegisterAsync(budgetApplyApi.Application.Requests.Identity.RegisterRequest)">
+            <summary>
+            新增使用者
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:budgetApplyApi.Server.Controllers.v1.BudgetDetailsController.Add(budgetApplyApi.Application.Features.Budgets.Commands.AddEdit.AddBudgetDetailCommand)">
+            <summary>
+            新增預算細項
+            </summary>
+        </member>
+        <member name="M:budgetApplyApi.Server.Controllers.v1.BudgetDetailsController.Edit(budgetApplyApi.Application.Features.Budgets.Commands.AddEdit.EditBudgetDetailCommand)">
+            <summary>
+            編輯預算細項
+            </summary>
+        </member>
+        <member name="M:budgetApplyApi.Server.Controllers.v1.BudgetDetailsController.GetById(System.Int32)">
+            <summary>
+            根據 id，取得預算細項
+            </summary>
+            <param name="id">預算細項 Id</param>
+            <returns>Status 200 OK</returns>
+        </member>
+        <member name="M:budgetApplyApi.Server.Controllers.v1.BudgetDetailsController.GetAll(System.Int32)">
+            <summary>
+            取得預算細項列表
+            </summary>
+            <returns>Status 200 OK</returns>
+        </member>
+        <member name="M:budgetApplyApi.Server.Controllers.v1.BudgetDetailsController.Delete(System.Int32)">
+            <summary>
+            刪除預算細項
+            </summary>
+            <param name="id">預算細項 id</param>
+            <returns>Status 200 OK response</returns>
+        </member>
+        <member name="M:budgetApplyApi.Server.Controllers.v1.BudgetsController.Add(budgetApplyApi.Application.Features.Budgets.Commands.AddEdit.AddBudgetCommand)">
+            <summary>
+            新增預算項目
+            </summary>
+        </member>
+        <member name="M:budgetApplyApi.Server.Controllers.v1.BudgetsController.Edit(budgetApplyApi.Application.Features.Budgets.Commands.AddEdit.EditBudgetCommand)">
+            <summary>
+            編輯預算項目
+            </summary>
+        </member>
+        <member name="M:budgetApplyApi.Server.Controllers.v1.BudgetsController.GetById(System.Int32)">
+            <summary>
+            根據 id，取得預算大項
+            </summary>
+            <param name="id">預算大項 Id</param>
+            <returns>Status 200 OK</returns>
+        </member>
+        <member name="M:budgetApplyApi.Server.Controllers.v1.BudgetsController.GetAll">
+            <summary>
+            取得預算大項列表
+            </summary>
+            <returns>Status 200 OK</returns>
+        </member>
+        <member name="M:budgetApplyApi.Server.Controllers.v1.BudgetsController.Delete(System.Int32)">
+            <summary>
+            刪除預算大項
+            </summary>
+            <param name="id"></param>
+            <returns>Status 200 OK response</returns>
+        </member>
+        <member name="M:budgetApplyApi.Server.Controllers.v1.Captcha.CaptchaController.GetCaptcha">
+            <summary>
+            取得驗證碼圖片
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
